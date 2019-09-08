@@ -2,3 +2,4 @@
 
 - [Peso ideal](./peso-ideal)
 - [Tipos de triângulo](./tipos-triangulo)
+- [Salário do funcionário](./SalarioFuncionario)
