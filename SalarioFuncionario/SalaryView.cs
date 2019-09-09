@@ -113,7 +113,14 @@ namespace SalarioFuncionario
         private void FillResultFields(double salary, double inss, double irpf, 
             double childAllowance, double netSalary)
         {
-            txtInssTaxRate.Text = ((inss / salary) * 100).ToString("N2") + "%";
+            if (salary <= 2801.56)
+            {
+                txtInssTaxRate.Text = ((inss / salary) * 100).ToString("N2") + "%";
+            }
+            else
+            {
+                txtInssTaxRate.Text = "11% de R$ 2801,56 (TETO)";
+            }
             txtIrpfTaxRate.Text = ((irpf / salary) * 100).ToString("N2") + "%";
             txtInssDiscount.Text = inss.ToString("C");
             txtIrpfDiscount.Text = irpf.ToString("C");
